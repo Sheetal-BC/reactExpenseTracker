@@ -40,7 +40,8 @@ function App() {
       amount = {expenses[i].amount}
       date = {expenses[i].date}
       locationOfExpenditure = {expenses[i].locationOfExpenditure}
-      > </ExpenseItem>))}
+      /> ))}
+    
      
         
       {/* <ExpenseItem 
