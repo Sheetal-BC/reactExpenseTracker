@@ -1,29 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem =(props) => {
-
+  let [amount, setAmount] = useState(props.amount);
 
   const clickHandler = () =>{
-    
-    const element = document.querySelector('.expense-item');
-    if(element){
-    element.parentNode.removeChild(element);
-    }
-
-}
+  setAmount('100');
+  // console.log(title);
+};
   
   return (
     <Card id='title' className='expense-item'>
       <ExpenseDate date={props.date} />
       <div className='expense-item__description'>
         <h2>{props.title}</h2>
-        <div className='expense-item__price'>${props.amount}</div>
+        <div className='expense-item__price'>${amount}</div>
       </div>
-      <button onClick={clickHandler}>Delete Expenses</button>
+      <button onClick={clickHandler}>Change Expenses</button>
     </Card>
   );
 }
