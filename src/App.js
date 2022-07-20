@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from './components/NewExpense/NewExpense';
 
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
  
    return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense/>
      {/* {expenses.map((element,i) => (<ExpenseItem
       title = {expenses[i].title}
       amount = {expenses[i].amount}
@@ -47,7 +48,8 @@ const App = () => {
      */}
      <Expenses items = {expenses}/>
      
-        
+    
+
       {/* <ExpenseItem 
       title={expenses[0].title}
        amount={expenses[0].amount} 
